@@ -12,6 +12,12 @@ A sample Node.js app to demonstrate **__fabric-client__** & **__fabric-ca-client
 
 ```
 cd fabric-samples/balance-transfer/
+
+docker rm -f $(docker ps -aq)
+
+docker network prune
+
+docker volume prune
 ```
 
 Once you have completed the above setup, you will have provisioned a local network with the following docker container configuration:
@@ -36,9 +42,9 @@ For each of these options, you may choose to run with chaincode written in golan
 * Launch the network using docker-compose
 
 ```
-docker-compose -f artifacts/docker-compose-cli.yaml up
-docker-compose -f artifacts/docker-compose-etcdraft2.yaml up
-docker-compose -f artifacts/docker-compose.yaml up
+docker-compose -f artifacts/docker-compose-cli.yaml up -d
+docker-compose -f artifacts/docker-compose-etcdraft2.yaml up -d 
+docker-compose -f artifacts/docker-compose.yaml up -d 
 
 ```
 ##### Terminal Window 2

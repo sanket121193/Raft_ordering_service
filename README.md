@@ -23,7 +23,7 @@ docker volume prune
 Once you have completed the above setup, you will have provisioned a local network with the following docker container configuration:
 
 * 2 CAs
-* A SOLO orderer
+* 5 Raft orderers
 * 4 peers (2 peers per Org)
 
 #### Artifacts
@@ -73,7 +73,7 @@ PORT=4000 node app
 ```
 cd fabric-samples/balance-transfer
 
-./runApp.sh
+node app
 
 ```
 
